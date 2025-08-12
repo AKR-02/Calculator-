@@ -4,17 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="../src/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>CALCULATOR</h1>
-        <div class="container-inner">
-            <div class="inputbar">
-                <input type="text" id="display">
-            </div>
-            <div class="oprators"></div>
+
+    <div class="calculator">
+        <input id="display" readonly>
+        <div class="buttons">
+            <button onclick="appendTodisplay(this.textContent)">7</button>
+            <button onclick="appendTodisplay(this.textContent)">8</button>
+            <button onclick="appendTodisplay(this.textContent)">9</button>
+            <button onclick="appendTodisplay(this.textContent)">/</button>
+            
+            <button onclick="appendTodisplay(this.textContent)">4</button>
+            <button onclick="appendTodisplay(this.textContent)">5</button>
+            <button onclick="appendTodisplay(this.textContent)">6</button>
+            <button onclick="appendTodisplay(this.textContent)">*</button>
+            
+            <button onclick="appendTodisplay(this.textContent)">1</button>
+            <button onclick="appendTodisplay(this.textContent)">2</button>
+            <button onclick="appendTodisplay(this.textContent)">3</button>
+            <button onclick="appendTodisplay(this.textContent)">-</button>
+            
+            <button onclick="appendTodisplay(this.textContent)">0</button>
+            <button onclick="appendTodisplay(this.textContent)">.</button>
+            <button onclick="appendTodisplay(this.textContent)">+</button>
+            <button onclick="calculateResult(this.textContent)">=</button>
+
+            <button onclick="clearDisplay(this.textContent)" id="clear" style="grid-column: span 4;">C</button>
         </div>
     </div>
+    <script src="../src/script.js"></script>
 </body>
 </html>
