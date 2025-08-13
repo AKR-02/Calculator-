@@ -13,6 +13,15 @@ body {
     background: #f4f4f4;
 }
 
+#heading {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    color: #333;
+}
+
 .calculator {
     width: 275px;
     background: white;
@@ -31,6 +40,7 @@ body {
     border: 1px solid #ccc;
     margin-bottom: 10px;
     background: #eee;
+    border-radius: 10px;
 }
 
 .buttons {
@@ -39,8 +49,181 @@ body {
     gap: 5px;
 }
 
-button {
+/* button {
     height: 50px;
     font-size: 1.2em;
     cursor: pointer;
+    border-radius: 10px; */
+/* } */
+button {
+ height: 3em;
+ background-color: #eeeeee4b;
+ border-radius: 3px;
+ letter-spacing: 1px;
+ transition: all 0.2s linear;
+ cursor: pointer;
+ border: 2px solid;
+ background: #fff;
+}
+
+button > svg {
+ margin-right: 5px;
+ margin-left: 5px;
+ font-size: 20px;
+ transition: all 0.4s ease-in;
+}
+
+button:hover > svg {
+ font-size: 1.2em;
+ transform: translateX(-5px);
+}
+
+button:hover {
+ transform: translateY(-2px);
+}
+
+#clear {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+#equals {
+    background-color: green;
+    color: white;
+}
+
+/* Dark mode toggler */
+/* From Uiverse.io by JustCode14 */ 
+.Switch {
+  font-size: 17px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 4em;
+  height: 2.2em;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide default HTML checkbox */
+.Switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2a2a2a;
+  transition: 0.4s;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.2em;
+  width: 1.2em;
+  border-radius: 20px;
+  left: 0.5em;
+  bottom: 0.5em;
+  transition: 0.4s;
+  transition-timing-function: cubic-bezier(0.81, -0.04, 0.38, 1.5);
+  box-shadow: inset 8px -4px 0px 0px #fff;
+}
+
+.Switch input:checked + .slider {
+  background-color: #00a6ff;
+}
+
+.Switch input:checked + .slider:before {
+  transform: translateX(1.8em);
+  box-shadow: inset 15px -4px 0px 15px #ffcf48;
+}
+
+.star {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  width: 5px;
+  transition: all 0.4s;
+  height: 5px;
+}
+
+.star_1 {
+  left: 2.5em;
+  top: 0.5em;
+}
+
+.star_2 {
+  left: 2.2em;
+  top: 1.2em;
+}
+
+.star_3 {
+  left: 3em;
+  top: 0.9em;
+}
+
+.Switch input:checked ~ .slider .star {
+  opacity: 0;
+}
+
+.cloud {
+  width: 3.5em;
+  position: absolute;
+  bottom: -1.4em;
+  left: -1.1em;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.Switch input:checked ~ .slider .cloud {
+  opacity: 1;
+}
+
+/* DARK MODE */
+body.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .calculator {
+    background: #232323;
+    color: #fff;
+}
+
+body.dark-mode #display {
+    background: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+body.dark-mode button {
+    background: #444;
+    color: #fff;
+    border-color: #666;
+}
+
+body.dark-mode #clear {
+    background-color: #b71c1c;
+    color: #fff;
+}
+
+body.dark-mode #equals {
+    background-color: #388e3c;
+    color: #fff;
+}
+
+body.dark-mode #heading {
+    color: #fff;
 }

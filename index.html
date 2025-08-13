@@ -7,9 +7,26 @@
     <link rel="stylesheet" href="../src/style.css">
 </head>
 <body>
+    <h1 id="heading">Made By Late Coder</h1>
+    <!-- From Uiverse.io by JustCode14 --> 
+    <label class="Switch">
+        <input checked="true" id="checkbox" type="checkbox" />
+        <span class="slider">
+            <div class="star star_1"></div>
+            <div class="star star_2"></div>
+            <div class="star star_3"></div>
+            <svg viewBox="0 0 16 16" class="cloud_1 cloud">
+            <path
+                transform="matrix(.77976 0 0 .78395-299.99-418.63)"
+                fill="#fff"
+                d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925"
+            ></path>
+            </svg>
+        </span>
+    </label>
 
     <div class="calculator">
-        <input id="display" readonly>
+        <input id="display"readonly>
         <div class="buttons">
             <button onclick="appendTodisplay(this.textContent)">7</button>
             <button onclick="appendTodisplay(this.textContent)">8</button>
@@ -25,13 +42,17 @@
             <button onclick="appendTodisplay(this.textContent)">2</button>
             <button onclick="appendTodisplay(this.textContent)">3</button>
             <button onclick="appendTodisplay(this.textContent)">-</button>
-            
-            <button onclick="appendTodisplay(this.textContent)">0</button>
-            <button onclick="appendTodisplay(this.textContent)">.</button>
-            <button onclick="appendTodisplay(this.textContent)">+</button>
-            <button onclick="calculateResult(this.textContent)">=</button>
 
-            <button onclick="clearDisplay(this.textContent)" id="clear" style="grid-column: span 4;">C</button>
+            <button onclick="appendTodisplay(this.textContent)">.</button>
+            <button onclick="appendTodisplay(this.textContent)">0</button>
+            <button onclick="appendTodisplay(this.textContent)">+</button>
+            <button onclick="calculateResult(this.textContent)" id ="equals">=</button>
+
+            <button onclick="clearDisplay(this.textContent)" id="clear" style="grid-column: span 2;">C</button>
+            <!-- From Uiverse.io by Jedi-hongbin --> 
+            <button onclick="goBack()" id="back" style="grid-column: span 2;">
+                <svg height="28" width="48" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024"><path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path></svg>
+            </button>
         </div>
     </div>
     <script src="../src/script.js"></script>
