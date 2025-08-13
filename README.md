@@ -12,7 +12,9 @@ Supports basic arithmetic operations, keyboard input, and persistent state using
 🎨 Built with plain CSS — easy to style and extend.
 
 🌙 Optional dark mode toggle using a CSS class switch.
+
 #🛠 Core Concepts
+
 DOM Access & Event Handling
 Uses document.getElementById and addEventListener to capture clicks and key presses.
 
